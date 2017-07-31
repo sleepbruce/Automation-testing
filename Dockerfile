@@ -1,3 +1,3 @@
 FROM ubuntu:latest
-ENV ORACLE_HOME=/usr/local/share/instantclient \
-    LD_LIBRARY_PATH=/usr/local/share/instantclient
+COPY prepare.sh /usr/local/bin/
+RUN /bin/sh /usr/local/bin/prepare.sh
